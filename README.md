@@ -52,3 +52,14 @@ digitize=lambda n: map(int, list(str(n))[::-1])
 def add(s1, s2):
     return sum(ord(x) for x in s1+s2)
 ```
+
+##Flatten Me
+##7 kyu
+####-Module: flatten.py
+####-Tests: test_flatten.py
+####-Link: https://www.codewars.com/kata/55a5bef147d6be698b0000cd/solutions/python
+```python
+"""This was the solution by daddepledge."""
+def flatten_me(lst):
+    return [v for sub in [e if type(e) == list else [e] for e in lst] for v in sub]
+```
