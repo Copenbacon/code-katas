@@ -38,7 +38,17 @@ def howManyLightsabersDoYouOwn(name=""):
 ####-Tests: test_convert_array.py
 ####-Link: https://www.codewars.com/kata/5583090cbe83f4fd8c000051/solutions/python
 ```python
-"""This was the solution by GiacomoSorbi, narayanswa30663)."""
+"""This was the solution by GiacomoSorbi, narayanswa30663."""
 digitize=lambda n: map(int, list(str(n))[::-1])
 ```
 
+##Noob Debug 1: Fix the string sum!
+##7 kyu
+####-Module: debug_string_add.py
+####-Tests: test_debug_string_add.py
+####-Link: https://www.codewars.com/kata/noob-debug-1-fix-the-string-sum/solutions/python/
+```python
+"""This was the solution by MiraliN, Chris_Rands."""
+def add(s1, s2):
+    return sum(ord(x) for x in s1+s2)
+```
