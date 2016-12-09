@@ -2,6 +2,7 @@
 
 
 ##Multiply
+###8 kyu
 ####-Module: multiply.py
 ####-Tests: test_multiply.py
 ####-Link: https://www.codewars.com/kata/50654ddff44f800200000004/train/python
@@ -11,6 +12,7 @@ multiply = lambda a,b: a * b
 ```
 
 ##Banjo
+###8 kyu
 ####-Module: banjo.py
 ####-Tests: test_banjo.py
 ####-Link: https://www.codewars.com/kata/53af2b8861023f1d88000832/train/python
@@ -20,6 +22,7 @@ areYouPlayingBanjo=lambda n:n+[" does not play"," plays"][n[0]in'Rr']+" banjo"
 ```
 
 ##Lightsabers
+###8 kyu
 ####-Module: lightsabers.py
 ####-Tests: test_lightsabers.py
 ####-Link: https://www.codewars.com/kata/51f9d93b4095e0a7200001b8/solutions/python
@@ -28,3 +31,14 @@ areYouPlayingBanjo=lambda n:n+[" does not play"," plays"][n[0]in'Rr']+" banjo"
 def howManyLightsabersDoYouOwn(name=""):
     return (18 if name=="Zach" else 0)
 ```
+
+##Digitize
+###8 kyu
+####-Module: convert_array.py
+####-Tests: test_convert_array.py
+####-Link: https://www.codewars.com/kata/5583090cbe83f4fd8c000051/solutions/python
+```python
+"""This was the solution by GiacomoSorbi, narayanswa30663)."""
+digitize=lambda n: map(int, list(str(n))[::-1])
+```
+
