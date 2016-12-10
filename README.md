@@ -63,3 +63,16 @@ def add(s1, s2):
 def flatten_me(lst):
     return [v for sub in [e if type(e) == list else [e] for e in lst] for v in sub]
 ```
+
+##Dinner Plans
+##7 kyu
+####-Module: dinner_plans.py
+####-Tests: test_dinner_plans.py
+####-Link: https://www.codewars.com/kata/57212c55b6fa235edc0002a2/solutions/python
+```python
+"""This was the solution by Mr.Child."""
+def common_ground(s1,s2):
+    s = s2.split()
+    return ' '.join(sorted((x for x in set(s1.split()) if x in s), key=lambda y: s.index(y))) or 'death'
+```
+
