@@ -76,3 +76,15 @@ def common_ground(s1,s2):
     return ' '.join(sorted((x for x in set(s1.split()) if x in s), key=lambda y: s.index(y))) or 'death'
 ```
 
+##Multiple Delimiters
+##7 kyu
+####-Module: mult_delimiters.py
+####-Tests: test_mult_delimiters.py
+####-Link: https://www.codewars.com/kata/575690ee34a34efb37001796/solutions/python
+```python
+"""This was the solution by anter69."""
+from re import split, escape
+
+def multiple_split(string, delimiters=[]):
+    return filter(None, split('|'.join(map(escape, delimiters)), string))
+```
