@@ -103,3 +103,13 @@ def fizz_buzz_cuckoo_clock(time):
         return ' '.join(['Cuckoo'] * (hours if not minutes else 1))
     return ' '.join(('Fizz' * (not minutes % 3), 'Buzz' * (not minutes % 5))).strip() or 'tick'
 ```
+
+##Sea Sick
+##7 kyu
+####-Module: sea_sick.py
+####-Tests: test_sea_sick.py
+####-Link: https://www.codewars.com/kata/57e90bcc97a0592126000064/solutions/python
+```python
+"""This was the solution by lechevalier."""
+sea_sick = lambda s:["No Problem", "Throw Up"][s.count('~_') + s.count('_~')> .2 * len(s)]
+```
