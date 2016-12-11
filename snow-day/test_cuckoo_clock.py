@@ -32,7 +32,7 @@ def test_randos():
         expected, actual = my_fizz_buzz_cuckoo_clock(quarter_test), fizz_buzz_cuckoo_clock(quarter_test)
         assert actual == expected
     # and some totally-random tests
-    for i in range(40):
+    for i in range  (40):
         random_test = "{:02}:{:02}".format(random.randint(0, 23), random.randint(0, 59))
         expected, actual = my_fizz_buzz_cuckoo_clock(random_test), fizz_buzz_cuckoo_clock(random_test)
         assert actual == expected

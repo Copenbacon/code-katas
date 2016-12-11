@@ -113,3 +113,14 @@ def fizz_buzz_cuckoo_clock(time):
 """This was the solution by lechevalier."""
 sea_sick = lambda s:["No Problem", "Throw Up"][s.count('~_') + s.count('_~')> .2 * len(s)]
 ```
+
+##Sum of the first nth term of Series
+##7 kyu
+####-Module: sum_series.py
+####-Tests: test_sum_terms.py
+####-Link: http://www.codewars.com/kata/555eded1ad94b00403000071/solutions/python
+```python
+"""This was the solution by MMMAAANNN, doctornick5, Slx64."""
+def series_sum(n):
+    return '{:.2f}'.format(sum(1.0/(3 * i + 1) for i in range(n)))
+```
