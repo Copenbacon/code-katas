@@ -1,6 +1,11 @@
 # code-katas
 
 
+##Proper Parenthetics
+####-Module: proper_parenthetics.py
+####-Tests: test_proper_parenthetics.py
+####-Link: https://codefellows.github.io/sea-python-401d5/assignments/proper_parenthetics.html
+
 ##Multiply
 ###8 kyu
 ####-Module: multiply.py
