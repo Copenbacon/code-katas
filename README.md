@@ -1,5 +1,14 @@
 # code-katas
 
+##Sort Cards
+####-Module: sort_cards.py
+####-Tests: test_sort_cards.py
+####-Link: https://www.codewars.com/kata/sort-deck-of-cards/train/python
+```python
+"""This was the solution by zebulan, Unnamed, acaccia, j_codez, Mr.Child, iamchingel."""
+def sort_cards(cards):
+    return sorted(cards, key="A23456789TJQK".index)
+```
 
 ##Proper Parenthetics
 ####-Module: proper_parenthetics.py
