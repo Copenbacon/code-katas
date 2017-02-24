@@ -1,4 +1,5 @@
 # code-katas
+### A collection of my solutions for Code Katas from CodeWars.com
 
 ##Duplicate Encoder
 ####-Module: dup_encoder.py
