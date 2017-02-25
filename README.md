@@ -1,6 +1,17 @@
 # code-katas
 ### A collection of my solutions for Code Katas from CodeWars.com
 
+##Is a Number Prime?
+###6 kyu
+####-Module: prime.py
+####-Tests: test_prime.py
+####-Link: https://www.codewars.com/kata/is-a-number-prime/train/python
+```python
+"""The solution by nevin and shig was pretty interesting."""
+def is_prime(num):
+    return num > 1 and not any(num % n == 0 for n in range(2,num))
+```
+
 ##Duplicate Encoder
 ###6 kyu
 ####-Module: dup_encoder.py
