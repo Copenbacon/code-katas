@@ -2,6 +2,7 @@
 ### A collection of my solutions for Code Katas from CodeWars.com
 
 ##Duplicate Encoder
+###6 kyu
 ####-Module: dup_encoder.py
 ####-Tests: test_dup_encoder.py
 ####-Link: https://www.codewars.com/kata/duplicate-encoder/train/python
