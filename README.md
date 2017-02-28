@@ -1,7 +1,7 @@
 # code-katas
 
 ##Current Coverage
-
+```
 ---------- coverage: platform linux2, python 2.7.12-final-0 ----------
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
@@ -83,6 +83,7 @@ TOTAL                                 435     34    92%
 
 
 ========================== 57 passed in 0.45 seconds
+```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
@@ -101,7 +102,7 @@ def isPP(n):
         k = round(log(n, m))
         if m ** k == n:
             return [m, k]
-                     
+
     return None
 ```
 
