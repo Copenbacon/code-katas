@@ -1,5 +1,109 @@
 # code-katas
+
+##Current Coverage
+
+---------- coverage: platform linux2, python 2.7.12-final-0 ----------
+Name                                Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------
+katas/banjo.py                          5      0   100%
+katas/convert_array.py                  7      0   100%
+katas/cuckoo_clock.py                  22      0   100%
+katas/debug_string_add.py               8      0   100%
+katas/dinner_plans.py                  10      0   100%
+katas/dup_encoder.py                    8      0   100%
+katas/flatten.py                        7      0   100%
+katas/lightsabers.py                    4      0   100%
+katas/mult_delimiters.py                6      0   100%
+katas/multiply.py                       2      0   100%
+katas/perfectpower.py                  11      0   100%
+katas/prime.py                         11      0   100%
+katas/proper_parenthetics.py           12      0   100%
+katas/sea_sick.py                       4      0   100%
+katas/sort_cards.py                    28      0   100%
+katas/sum_series.py                     5      0   100%
+katas/test_banjo.py                     9      0   100%
+katas/test_convert_array.py            13      0   100%
+katas/test_cuckoo_clock.py             26      0   100%
+katas/test_debug_string_add.py          5      0   100%
+katas/test_dinner_plans.py             20      0   100%
+katas/test_dup_encoder.py              14      0   100%
+katas/test_flatten.py                  23      0   100%
+katas/test_lightsabers.py               5      0   100%
+katas/test_mult_delimiters.py          11      0   100%
+katas/test_multiply.py                  4      0   100%
+katas/test_perfectpower.py             24      9    63%   30-39
+katas/test_prime.py                     5      0   100%
+katas/test_proper_parenthetics.py       5      0   100%
+katas/test_sea_sick.py                 14      0   100%
+katas/test_sort_cards.py               16      0   100%
+katas/test_sum_terms.py                21      0   100%
+-----------------------------------------------------------------
+TOTAL                                 435     41    91%
+
+
+========================== 57 passed in 0.33 seconds
+
+----------- coverage: platform linux, python 3.5.2-final-0 -----------
+Name                                Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------
+katas/banjo.py                          5      0   100%
+katas/convert_array.py                  7      0   100%
+katas/cuckoo_clock.py                  22      0   100%
+katas/debug_string_add.py               8      0   100%
+katas/dinner_plans.py                  10      0   100%
+katas/dup_encoder.py                    8      0   100%
+katas/flatten.py                        7      0   100%
+katas/lightsabers.py                    4      0   100%
+katas/mult_delimiters.py                6      0   100%
+katas/multiply.py                       2      0   100%
+katas/perfectpower.py                  11      0   100%
+katas/prime.py                         11      0   100%
+katas/proper_parenthetics.py           12      0   100%
+katas/sea_sick.py                       4      0   100%
+katas/sort_cards.py                    28      0   100%
+katas/sum_series.py                     5      0   100%
+katas/test_banjo.py                     9      0   100%
+katas/test_convert_array.py            13      0   100%
+katas/test_cuckoo_clock.py             26      0   100%
+katas/test_debug_string_add.py          5      0   100%
+katas/test_dinner_plans.py             20      0   100%
+katas/test_dup_encoder.py              14      0   100%
+katas/test_flatten.py                  23      0   100%
+katas/test_lightsabers.py               5      0   100%
+katas/test_mult_delimiters.py          11      0   100%
+katas/test_multiply.py                  4      0   100%
+katas/test_perfectpower.py             24      2    92%   36-37
+katas/test_prime.py                     5      0   100%
+katas/test_proper_parenthetics.py       5      0   100%
+katas/test_sea_sick.py                 14      0   100%
+katas/test_sort_cards.py               16      0   100%
+katas/test_sum_terms.py                21      0   100%
+-----------------------------------------------------------------
+TOTAL                                 435     34    92%
+
+
+========================== 57 passed in 0.45 seconds
+
+
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+##Perfect Powers
+###5 kyu
+####-Module: perfectpower.py
+####-Tests: test_perfectpower.py
+####-Link: https://www.codewars.com/kata/whats-a-perfect-power-anyway/train/python
+```python
+"""I really liked this solution by fanzen190."""
+
+from math import sqrt, log
+def isPP(n):
+    for m in range(2, int(sqrt(n)) + 1):
+        k = round(log(n, m))
+        if m ** k == n:
+            return [m, k]
+                     
+    return None
+```
 
 ##Is a Number Prime?
 ###6 kyu
