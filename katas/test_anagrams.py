@@ -12,6 +12,6 @@ TEST_TABLE = [
 ]
 
 @pytest.mark.parametrize("word, words, result", TEST_TABLE)
-def test_anagrams(word, words, result)
+def test_anagrams(word, words, result):
     """Test the TEST_TABLE from CodeWars."""
     assert(anagrams(word, words) == result)

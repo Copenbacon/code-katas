@@ -5,11 +5,13 @@
 ---------- coverage: platform linux2, python 2.7.12-final-0 ----------
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
+katas/anagrams.py                       7      0   100%
 katas/banjo.py                          5      0   100%
 katas/convert_array.py                  7      0   100%
 katas/cuckoo_clock.py                  22      0   100%
 katas/debug_string_add.py               8      0   100%
 katas/dinner_plans.py                  10      0   100%
+katas/dll.py                           70     32    54%   37-38, 40, 49-50, 56, 78-85, 89-96, 100-110
 katas/dup_encoder.py                    8      0   100%
 katas/flatten.py                        7      0   100%
 katas/lightsabers.py                    4      0   100%
@@ -21,6 +23,7 @@ katas/proper_parenthetics.py           12      0   100%
 katas/sea_sick.py                       4      0   100%
 katas/sort_cards.py                    28      0   100%
 katas/sum_series.py                     5      0   100%
+katas/test_anagrams.py                  5      0   100%
 katas/test_banjo.py                     9      0   100%
 katas/test_convert_array.py            13      0   100%
 katas/test_cuckoo_clock.py             26      0   100%
@@ -38,19 +41,21 @@ katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
 -----------------------------------------------------------------
-TOTAL                                 435     41    91%
+TOTAL                                 447     41    91%
 
 
-========================== 57 passed in 0.33 seconds
+========================== 63 passed in 0.44 seconds
 
 ----------- coverage: platform linux, python 3.5.2-final-0 -----------
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
+katas/anagrams.py                       7      0   100%
 katas/banjo.py                          5      0   100%
 katas/convert_array.py                  7      0   100%
 katas/cuckoo_clock.py                  22      0   100%
 katas/debug_string_add.py               8      0   100%
 katas/dinner_plans.py                  10      0   100%
+katas/dll.py                           70     32    54%   37-38, 40, 49-50, 56, 78-85, 89-96, 100-110
 katas/dup_encoder.py                    8      0   100%
 katas/flatten.py                        7      0   100%
 katas/lightsabers.py                    4      0   100%
@@ -62,6 +67,7 @@ katas/proper_parenthetics.py           12      0   100%
 katas/sea_sick.py                       4      0   100%
 katas/sort_cards.py                    28      0   100%
 katas/sum_series.py                     5      0   100%
+katas/test_anagrams.py                  5      0   100%
 katas/test_banjo.py                     9      0   100%
 katas/test_convert_array.py            13      0   100%
 katas/test_cuckoo_clock.py             26      0   100%
@@ -79,14 +85,24 @@ katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
 -----------------------------------------------------------------
-TOTAL                                 435     34    92%
+TOTAL                                 447     34    92%
 
 
-========================== 57 passed in 0.45 seconds
+========================== 63 passed in 0.47 seconds
 ```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+##Where my Anagrams at?
+###5 kyu
+####-Module: anagrams.py
+####-Tests: test_anagrams.py
+####-Link: https://www.codewars.com/kata/where-my-anagrams-at/train/python
+```python
+"""Great list comprehension solution by sandbochs, Dru7-BY, fandogh"""
+def anagrams(word, words): return [item for item in words if sorted(item)==sorted(word)]
+```
 
 ##Perfect Powers
 ###5 kyu
