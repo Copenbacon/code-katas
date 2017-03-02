@@ -17,6 +17,7 @@ katas/flatten.py                        7      0   100%
 katas/lightsabers.py                    4      0   100%
 katas/mult_delimiters.py                6      0   100%
 katas/multiply.py                       2      0   100%
+katas/nonrepeating_letter.py            5      0   100%
 katas/perfectpower.py                  11      0   100%
 katas/prime.py                         11      0   100%
 katas/proper_parenthetics.py           12      0   100%
@@ -34,6 +35,7 @@ katas/test_flatten.py                  23      0   100%
 katas/test_lightsabers.py               5      0   100%
 katas/test_mult_delimiters.py          11      0   100%
 katas/test_multiply.py                  4      0   100%
+katas/test_nonrepeating_letter.py      12      0   100%
 katas/test_perfectpower.py             24      9    63%   30-39
 katas/test_prime.py                     5      0   100%
 katas/test_proper_parenthetics.py       5      0   100%
@@ -41,10 +43,10 @@ katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
 -----------------------------------------------------------------
-TOTAL                                 447     41    91%
+TOTAL                                 464     41    91%
 
 
-========================== 63 passed in 0.44 seconds
+========================== 74 passed in 0.39 seconds
 
 ----------- coverage: platform linux, python 3.5.2-final-0 -----------
 Name                                Stmts   Miss  Cover   Missing
@@ -61,6 +63,7 @@ katas/flatten.py                        7      0   100%
 katas/lightsabers.py                    4      0   100%
 katas/mult_delimiters.py                6      0   100%
 katas/multiply.py                       2      0   100%
+katas/nonrepeating_letter.py            5      0   100%
 katas/perfectpower.py                  11      0   100%
 katas/prime.py                         11      0   100%
 katas/proper_parenthetics.py           12      0   100%
@@ -78,6 +81,7 @@ katas/test_flatten.py                  23      0   100%
 katas/test_lightsabers.py               5      0   100%
 katas/test_mult_delimiters.py          11      0   100%
 katas/test_multiply.py                  4      0   100%
+katas/test_nonrepeating_letter.py      12      0   100%
 katas/test_perfectpower.py             24      2    92%   36-37
 katas/test_prime.py                     5      0   100%
 katas/test_proper_parenthetics.py       5      0   100%
@@ -85,14 +89,27 @@ katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
 -----------------------------------------------------------------
-TOTAL                                 447     34    92%
+TOTAL                                 464     34    93%
 
 
-========================== 63 passed in 0.47 seconds
+========================== 74 passed in 0.50 seconds
 ```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+##First Non-Repeating Letter
+###5 kyu
+####-Module: nonrepeating_letter.py
+####-Tests: test_nonrepeating_letter.py
+####-Link: https://www.codewars.com/kata/first-non-repeating-letter/train/python
+```python
+"""List comprehension solve by alm8735"""
+
+def first_non_repeating_letter(string):
+    singles = [i for i in string if string.lower().count(i.lower()) == 1]
+    return singles[0] if singles else ''
+```
 
 ##Where my Anagrams at?
 ###5 kyu
