@@ -5,6 +5,7 @@
 ---------- coverage: platform linux2, python 2.7.12-final-0 ----------
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
+katas/IP_validation.py                 14      1    93%   14
 katas/anagrams.py                       7      0   100%
 katas/banjo.py                          5      0   100%
 katas/convert_array.py                  7      0   100%
@@ -32,6 +33,7 @@ katas/test_debug_string_add.py          5      0   100%
 katas/test_dinner_plans.py             20      0   100%
 katas/test_dup_encoder.py              14      0   100%
 katas/test_flatten.py                  23      0   100%
+katas/test_ip_validation.py             8      0   100%
 katas/test_lightsabers.py               5      0   100%
 katas/test_mult_delimiters.py          11      0   100%
 katas/test_multiply.py                  4      0   100%
@@ -43,14 +45,17 @@ katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
 -----------------------------------------------------------------
-TOTAL                                 464     41    91%
+TOTAL                                 486     42    91%
 
 
-========================== 74 passed in 0.39 seconds
+============================ pytest-warning summary ============================
+WR1 /home/copenbacon/codefellows401/code-katas/katas/test_ip_validation.py:16 assertion is always true, perhaps remove parentheses?
+================= 75 passed, 1 pytest-warnings in 0.39 seconds
 
 ----------- coverage: platform linux, python 3.5.2-final-0 -----------
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
+katas/IP_validation.py                 14      1    93%   14
 katas/anagrams.py                       7      0   100%
 katas/banjo.py                          5      0   100%
 katas/convert_array.py                  7      0   100%
@@ -78,6 +83,7 @@ katas/test_debug_string_add.py          5      0   100%
 katas/test_dinner_plans.py             20      0   100%
 katas/test_dup_encoder.py              14      0   100%
 katas/test_flatten.py                  23      0   100%
+katas/test_ip_validation.py             8      0   100%
 katas/test_lightsabers.py               5      0   100%
 katas/test_mult_delimiters.py          11      0   100%
 katas/test_multiply.py                  4      0   100%
@@ -89,14 +95,28 @@ katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
 -----------------------------------------------------------------
-TOTAL                                 464     34    93%
+TOTAL                                 486     35    93%
 
 
-========================== 74 passed in 0.50 seconds
+============================ pytest-warning summary ============================
+WR1 /home/copenbacon/codefellows401/code-katas/katas/test_ip_validation.py:16 assertion is always true, perhaps remove parentheses?
+================= 75 passed, 1 pytest-warnings in 0.52 seconds
 ```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+##IP Validation
+### 4 kyu
+####-Module: IP_validation.py
+####-Tests: test_ip_validation.py
+####-Link:https://www.codewars.com/kata/ip-validation/train/python
+```python
+"""List comprehension solve by pavel.koshev"""
+import re
+def is_valid_IP(strng):
+    return bool(re.match(r'^((\d{1,2}|1\d{2}|2[0-4]\d|25[0-5])(\.(?!$)|$)){4}(?=$)',strng))
+```
 
 ##First Non-Repeating Letter
 ###5 kyu
