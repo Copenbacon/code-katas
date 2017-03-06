@@ -44,13 +44,13 @@ katas/test_proper_parenthetics.py       5      0   100%
 katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
+katas/test_valid_parentheses.py        16      0   100%
+katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 486     42    91%
+TOTAL                                 515     42    92%
 
 
-============================ pytest-warning summary ============================
-WR1 /home/copenbacon/codefellows401/code-katas/katas/test_ip_validation.py:16 assertion is always true, perhaps remove parentheses?
-================= 75 passed, 1 pytest-warnings in 0.39 seconds
+========================== 86 passed in 0.42 seconds
 
 ----------- coverage: platform linux, python 3.5.2-final-0 -----------
 Name                                Stmts   Miss  Cover   Missing
@@ -94,17 +94,33 @@ katas/test_proper_parenthetics.py       5      0   100%
 katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
+katas/test_valid_parentheses.py        16      0   100%
+katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 486     35    93%
+TOTAL                                 515     35    93%
 
 
-============================ pytest-warning summary ============================
-WR1 /home/copenbacon/codefellows401/code-katas/katas/test_ip_validation.py:16 assertion is always true, perhaps remove parentheses?
-================= 75 passed, 1 pytest-warnings in 0.52 seconds
+========================== 86 passed in 0.56 seconds
 ```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+##Valid Parentheses
+### 5 kyu
+####-Module: valid_parentheses.py
+####-Tests: test_valid_parentheses.py
+####-Link: https://www.codewars.com/kata/valid-parentheses/train/python
+```python
+"""Interesting solve by albarralnunez, oshinjose, alanmathew671"""
+def valid_parentheses(string):
+    cnt = 0
+    for char in string:
+        if char == '(': cnt += 1
+        if char == ')': cnt -= 1
+        if cnt < 0: return False
+    return True if cnt == 0 else False"
+```
 
 ##IP Validation
 ### 4 kyu
