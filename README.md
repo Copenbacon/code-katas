@@ -7,6 +7,7 @@ Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
 katas/IP_validation.py                 14      1    93%   14
 katas/anagrams.py                       7      0   100%
+katas/baker.py                          9      0   100%
 katas/banjo.py                          5      0   100%
 katas/convert_array.py                  7      0   100%
 katas/cuckoo_clock.py                  22      0   100%
@@ -26,6 +27,7 @@ katas/sea_sick.py                       4      0   100%
 katas/sort_cards.py                    28      0   100%
 katas/sum_series.py                     5      0   100%
 katas/test_anagrams.py                  5      0   100%
+katas/test_baker.py                     7      0   100%
 katas/test_banjo.py                     9      0   100%
 katas/test_convert_array.py            13      0   100%
 katas/test_cuckoo_clock.py             26      0   100%
@@ -47,16 +49,17 @@ katas/test_sum_terms.py                21      0   100%
 katas/test_valid_parentheses.py        16      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 515     42    92%
+TOTAL                                 531     42    92%
 
 
-========================== 86 passed in 0.42 seconds
+========================== 92 passed in 0.45 seconds
 
 ----------- coverage: platform linux, python 3.5.2-final-0 -----------
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
 katas/IP_validation.py                 14      1    93%   14
 katas/anagrams.py                       7      0   100%
+katas/baker.py                          9      0   100%
 katas/banjo.py                          5      0   100%
 katas/convert_array.py                  7      0   100%
 katas/cuckoo_clock.py                  22      0   100%
@@ -76,6 +79,7 @@ katas/sea_sick.py                       4      0   100%
 katas/sort_cards.py                    28      0   100%
 katas/sum_series.py                     5      0   100%
 katas/test_anagrams.py                  5      0   100%
+katas/test_baker.py                     7      0   100%
 katas/test_banjo.py                     9      0   100%
 katas/test_convert_array.py            13      0   100%
 katas/test_cuckoo_clock.py             26      0   100%
@@ -97,14 +101,25 @@ katas/test_sum_terms.py                21      0   100%
 katas/test_valid_parentheses.py        16      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 515     35    93%
+TOTAL                                 531     35    93%
 
 
-========================== 86 passed in 0.56 seconds
+========================== 92 passed in 0.59 seconds
 ```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+##Pete, the baker
+### 5 kyu
+####-Module: baker.py
+####-Tests: test_baker.py
+####-Link: https://www.codewars.com/kata/pete-the-baker/train/python
+```python
+"""Great one liner from jerb, Ninjailbreak, sweettuse."""
+def cakes(recipe, available):
+  return min(available.get(k, 0)/recipe[k] for k in recipe)
+```
 
 ##Valid Parentheses
 ### 5 kyu
