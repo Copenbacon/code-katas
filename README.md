@@ -110,6 +110,17 @@ TOTAL                                 531     35    93%
 
 ### A collection of my solutions for Code Katas from CodeWars.com
 
+##Pete, the baker
+### 5 kyu
+####-Module: baker.py
+####-Tests: test_baker.py
+####-Link: https://www.codewars.com/kata/pete-the-baker/train/python
+```python
+"""Great one liner from jerb, Ninjailbreak, sweettuse."""
+def cakes(recipe, available):
+  return min(available.get(k, 0)/recipe[k] for k in recipe)
+```
+
 ##Valid Parentheses
 ### 5 kyu
 ####-Module: valid_parentheses.py
