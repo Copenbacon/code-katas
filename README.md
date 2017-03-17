@@ -46,13 +46,15 @@ katas/test_proper_parenthetics.py       5      0   100%
 katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
+katas/test_valid_braces.py              8      0   100%
 katas/test_valid_parentheses.py        16      0   100%
+katas/valid_braces.py                  17      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 531     42    92%
+TOTAL                                 556     42    92%
 
 
-========================== 92 passed in 0.45 seconds
+========================== 111 passed in 0.48 seconds 
 
 ----------- coverage: platform linux, python 3.5.2-final-0 -----------
 Name                                Stmts   Miss  Cover   Missing
@@ -98,17 +100,34 @@ katas/test_proper_parenthetics.py       5      0   100%
 katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
+katas/test_valid_braces.py              8      0   100%
 katas/test_valid_parentheses.py        16      0   100%
+katas/valid_braces.py                  17      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 531     35    93%
+TOTAL                                 556     35    94%
 
 
-========================== 92 passed in 0.59 seconds
+========================== 111 passed in 0.62 seconds
 ```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+##Valid Braces
+### 4 kyu
+####-Module: valid_braces.py
+####-Tests: test_valid_braces.py
+####-Link: https://www.codewars.com/kata/valid-braces/train/python
+```python
+"""Nice solve by herringjob."""
+def validBraces(s):
+  while '{}' in s or '()' in s or '[]' in s:
+      s=s.replace('{}','')
+      s=s.replace('[]','')
+      s=s.replace('()','')
+  return s==''
+```
 
 ##Pete, the baker
 ### 5 kyu
