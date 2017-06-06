@@ -2,7 +2,7 @@
 
 ##Current Coverage
 ```
----------- coverage: platform linux2, python 2.7.12-final-0 ----------
+---------- coverage: platform darwin, python 2.7.10-final-0 ----------
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
 katas/IP_validation.py                 14      1    93%   14
@@ -46,17 +46,20 @@ katas/test_proper_parenthetics.py       5      0   100%
 katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
+katas/test_triangle.py                 13      0   100%
 katas/test_valid_braces.py              8      0   100%
 katas/test_valid_parentheses.py        16      0   100%
+katas/triangle.py                       8      0   100%
 katas/valid_braces.py                  17      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 556     42    92%
+TOTAL                                 577     42    93%
 
 
-========================== 111 passed in 0.48 seconds 
+========================== 127 passed in 0.89 seconds
 
------------ coverage: platform linux, python 3.5.2-final-0 -----------
+
+---------- coverage: platform darwin, python 3.6.1-final-0 -----------
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
 katas/IP_validation.py                 14      1    93%   14
@@ -100,19 +103,32 @@ katas/test_proper_parenthetics.py       5      0   100%
 katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
 katas/test_sum_terms.py                21      0   100%
+katas/test_triangle.py                 13      0   100%
 katas/test_valid_braces.py              8      0   100%
 katas/test_valid_parentheses.py        16      0   100%
+katas/triangle.py                       8      0   100%
 katas/valid_braces.py                  17      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 556     35    94%
+TOTAL                                 577     35    94%
 
 
-========================== 111 passed in 0.62 seconds
+==================== 127 passed in 0.99 seconds
 ```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+## Is This A Triangle?
+### 7 kyu
+#### -Module: triangle.py
+#### -Tests: test_triangle.py
+#### -Link: https://www.codewars.com/kata/is-this-a-triangle/train/python
+```python
+"""Simple solution by Kamyk, ginpachi987, ashkuc, runaq, Shadow110, cvlol and more."""
+def is_triangle(a, b, c):
+    return (a<b+c) and (b<a+c) and (c<a+b)
+```
 
 ## Valid Braces
 ### 4 kyu
