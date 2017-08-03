@@ -25,6 +25,7 @@ katas/prime.py                         11      0   100%
 katas/proper_parenthetics.py           12      0   100%
 katas/sea_sick.py                       4      0   100%
 katas/sort_cards.py                    28      0   100%
+katas/streetfighter1.py                23      0   100%
 katas/sum_series.py                     5      0   100%
 katas/test_anagrams.py                  5      0   100%
 katas/test_baker.py                     7      0   100%
@@ -45,6 +46,7 @@ katas/test_prime.py                     5      0   100%
 katas/test_proper_parenthetics.py       5      0   100%
 katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
+katas/test_streetfighter1.py           55      0   100%
 katas/test_sum_terms.py                21      0   100%
 katas/test_triangle.py                 13      0   100%
 katas/test_valid_braces.py              8      0   100%
@@ -53,11 +55,7 @@ katas/triangle.py                       8      0   100%
 katas/valid_braces.py                  17      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 577     42    93%
-
-
-========================== 127 passed in 0.89 seconds
-
+TOTAL                                 655     42    94%
 
 ---------- coverage: platform darwin, python 3.6.1-final-0 -----------
 Name                                Stmts   Miss  Cover   Missing
@@ -82,6 +80,7 @@ katas/prime.py                         11      0   100%
 katas/proper_parenthetics.py           12      0   100%
 katas/sea_sick.py                       4      0   100%
 katas/sort_cards.py                    28      0   100%
+katas/streetfighter1.py                23      0   100%
 katas/sum_series.py                     5      0   100%
 katas/test_anagrams.py                  5      0   100%
 katas/test_baker.py                     7      0   100%
@@ -102,6 +101,7 @@ katas/test_prime.py                     5      0   100%
 katas/test_proper_parenthetics.py       5      0   100%
 katas/test_sea_sick.py                 14      0   100%
 katas/test_sort_cards.py               16      0   100%
+katas/test_streetfighter1.py           55      0   100%
 katas/test_sum_terms.py                21      0   100%
 katas/test_triangle.py                 13      0   100%
 katas/test_valid_braces.py              8      0   100%
@@ -110,14 +110,36 @@ katas/triangle.py                       8      0   100%
 katas/valid_braces.py                  17      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 577     35    94%
+TOTAL                                 655     35    95%
 
 
-==================== 127 passed in 0.99 seconds
+========================== 136 passed in 0.99 seconds 
 ```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+## Street Fighter 2 - Character Selection
+### 6 kyu
+#### -Module: streetfighter1.py
+#### -Tests: test_streetfighter1.py
+#### -Link: https://www.codewars.com/kata/street-fighter-2-character-selection/train/python
+```python
+"""Clever solve by lechevalier."""
+MOVES = {"up": (-1, 0), "down": (1, 0), "right": (0, 1), "left": (0, -1)}
+
+def street_fighter_selection(fighters, initial_position, moves):
+    y, x = initial_position
+    hovered_fighters = []
+    for move in moves:
+        dy, dx = MOVES[move]
+        y += dy
+        if not 0 <= y < len(fighters):
+            y -= dy
+        x = (x + dx) % len(fighters[y])
+        hovered_fighters.append(fighters[y][x])
+    return hovered_fighters
+```
 
 ## Is This A Triangle?
 ### 7 kyu
