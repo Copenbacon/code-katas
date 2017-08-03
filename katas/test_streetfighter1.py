@@ -1,4 +1,5 @@
 import pytest
+import random
 from streetfighter1 import street_fighter_selection
 
 fighters = [
@@ -66,8 +67,10 @@ def test_all_chars():
                 'Ken', 'Chun Li', 'Zangief', 'Dhalsim', 'Sagat', 'M.Bison', 'Ken']
     assert street_fighter_selection(fighters, (0, 0), moves) == solution
 
-import random
-test.describe("Random Tests now!")
+
+"""Random Tests now!"""
+
+
 def my_street_fighter_selection(fighters, position, moves):
     dirs = {"up": -1, "down": 1, "left": -1, "right": 1}
     res = []
@@ -81,11 +84,12 @@ def my_street_fighter_selection(fighters, position, moves):
         # print i, fighters[position[0]][position[1]]
         res.append(fighters[position[0]][position[1]])
     return res
-    
-"""Should work with random values."""
-for i in range(40):
-    moves = []
-    for i in range(random.randint(3,50)):
-	    moves.append(random.choice(opts))
-    assert street_fighter_selection(fighters,(0,0), moves), my_street_fighter_selection(fighters,(0,0), moves)
 
+
+def test_random():
+    """Should work with random values."""
+    for i in range(40):
+        moves = []
+        for i in range(random.randint(3,50)):
+    	    moves.append(random.choice(opts))
+        assert street_fighter_selection(fighters,(0,0), moves) == my_street_fighter_selection(fighters,(0,0), moves)
