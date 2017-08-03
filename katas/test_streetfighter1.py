@@ -11,20 +11,24 @@ opts = ["up", "down", "right", "left"]
 
 
 def test_no_selection():
-"""Should work with no selection cursor moves."""
+    """Should work with no selection cursor moves."""
     moves = []
     solution = []
-    assert street_fighter_selection(fighters, (0, 0), moves == solution
+    assert street_fighter_selection(fighters, (0, 0), moves) == solution
 
-test.it("should go left 8 times")
-moves =  ["left"]*8
-solution = ['Vega', 'Balrog', 'Guile', 'Blanka', 'E.Honda', 'Ryu', 'Vega', 'Balrog']
-test.assert_equals(street_fighter_selection(fighters,(0,0), moves), solution)
 
-test.it("should go right 8 times")
-moves =  ["right"]*8
-solution = ['E.Honda', 'Blanka', 'Guile', 'Balrog', 'Vega', 'Ryu', 'E.Honda', 'Blanka']
-test.assert_equals(street_fighter_selection(fighters,(0,0), moves), solution)
+def test_left():
+    """Should go left 8 times."""
+    moves = ["left"] * 8
+    solution = ['Vega', 'Balrog', 'Guile', 'Blanka', 'E.Honda', 'Ryu', 'Vega', 'Balrog']
+    assert street_fighter_selection(fighters, (0, 0), moves) == solution
+
+
+def test_right():
+    """Should go right 8 times."""
+    moves = ["right"] * 8
+    solution = ['E.Honda', 'Blanka', 'Guile', 'Balrog', 'Vega', 'Ryu', 'E.Honda', 'Blanka']
+    assert street_fighter_selection(fighters, (0, 0), moves) == solution
 
 test.it("should go up 4 times, always the same")
 moves =  ["up"]*4
