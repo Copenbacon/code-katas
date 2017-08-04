@@ -2,6 +2,7 @@
 
 ##Current Coverage
 ```
+
 ---------- coverage: platform darwin, python 2.7.10-final-0 ----------
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
@@ -20,6 +21,7 @@ katas/lightsabers.py                    4      0   100%
 katas/mult_delimiters.py                6      0   100%
 katas/multiply.py                       2      0   100%
 katas/nonrepeating_letter.py            5      0   100%
+katas/parsedomain.py                    8      0   100%
 katas/perfectpower.py                  11      0   100%
 katas/prime.py                         11      0   100%
 katas/proper_parenthetics.py           12      0   100%
@@ -41,6 +43,7 @@ katas/test_lightsabers.py               5      0   100%
 katas/test_mult_delimiters.py          11      0   100%
 katas/test_multiply.py                  4      0   100%
 katas/test_nonrepeating_letter.py      12      0   100%
+katas/test_parsedomain.py               8      0   100%
 katas/test_perfectpower.py             24      9    63%   30-39
 katas/test_prime.py                     5      0   100%
 katas/test_proper_parenthetics.py       5      0   100%
@@ -55,7 +58,10 @@ katas/triangle.py                       8      0   100%
 katas/valid_braces.py                  17      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 655     42    94%
+TOTAL                                 671     42    94%
+
+
+========================== 139 passed in 1.14 seconds
 
 ---------- coverage: platform darwin, python 3.6.1-final-0 -----------
 Name                                Stmts   Miss  Cover   Missing
@@ -75,6 +81,7 @@ katas/lightsabers.py                    4      0   100%
 katas/mult_delimiters.py                6      0   100%
 katas/multiply.py                       2      0   100%
 katas/nonrepeating_letter.py            5      0   100%
+katas/parsedomain.py                    8      0   100%
 katas/perfectpower.py                  11      0   100%
 katas/prime.py                         11      0   100%
 katas/proper_parenthetics.py           12      0   100%
@@ -96,6 +103,7 @@ katas/test_lightsabers.py               5      0   100%
 katas/test_mult_delimiters.py          11      0   100%
 katas/test_multiply.py                  4      0   100%
 katas/test_nonrepeating_letter.py      12      0   100%
+katas/test_parsedomain.py               8      0   100%
 katas/test_perfectpower.py             24      2    92%   36-37
 katas/test_prime.py                     5      0   100%
 katas/test_proper_parenthetics.py       5      0   100%
@@ -110,14 +118,26 @@ katas/triangle.py                       8      0   100%
 katas/valid_braces.py                  17      0   100%
 katas/valid_parentheses.py             13      0   100%
 -----------------------------------------------------------------
-TOTAL                                 655     35    95%
+TOTAL                                 671     35    95%
 
 
-========================== 136 passed in 0.99 seconds 
+========================== 139 passed in 1.16 seconds
 ```
 
 
 ### A collection of my solutions for Code Katas from CodeWars.com
+
+## Extract the domain name from a URL
+### 5 kyu
+#### -Module: parsedomain.py
+#### -Tests: test_parsedomain.py
+#### -Link: https://www.codewars.com/kata/extract-the-domain-name-from-a-url-1/train/python
+```python
+"""Neat solution using regex by kapaulm."""
+import re
+def domain_name(url):
+    return re.search('(https?://)?(www\d?\.)?(?P<name>[\w-]+)\.', url).group('name')
+```
 
 ## Street Fighter 2 - Character Selection
 ### 6 kyu
